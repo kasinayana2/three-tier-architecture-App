@@ -13,7 +13,6 @@ namespace DataAccessLayer
     public class Employee
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["constr"].ToString());
-
         public int SaveEmp(BusinessObjects.Employee objemp)
         {
             con.Open();
@@ -53,8 +52,6 @@ namespace DataAccessLayer
             com.Parameters.AddWithValue("@MobileNumber", objemp.MobileNumber);
             com.Parameters.AddWithValue("@Email", objemp.Email);
             com.Parameters.AddWithValue("@DateOfJoin", objemp.DateOfJoin);
-            //com.Parameters.AddWithValue("@DatePublished", objemp.DatePublished);
-            //com.Parameters.AddWithValue("@DateCreated", objemp.DateCreated);
             int i = com.ExecuteNonQuery();
             con.Close();
             return i;

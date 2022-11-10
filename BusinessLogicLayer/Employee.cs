@@ -15,8 +15,7 @@ namespace BusinessLogicLayer
         public int SaveEmp(BusinessObjects.Employee objemp)
         {
             int i = objempdal.SaveEmp(objemp);
-            return i;
-             
+            return i;            
         }
         public int DeleteEmp(BusinessObjects.Employee objemp)
         {
@@ -33,6 +32,5 @@ namespace BusinessLogicLayer
             DataSet ds = objempdal.GetEmp();
             return ds;
         }
-
     }
 }

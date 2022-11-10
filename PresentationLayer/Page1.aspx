@@ -71,7 +71,6 @@
                 <tr>
                     <td class="auto-style2">Gender</td>
                     <td>
-                        <%--                        <asp:RadioButtonList ID="rblGender" runat="server" OnSelectedIndexChanged="rblGender_SelectedIndexChanged"></asp:RadioButtonList>--%>
                         <asp:RadioButtonList ID="rblGender" runat="server"  repeatcolumns="3" AutoPostBack="True" RepeatDirection="Horizontal"></asp:RadioButtonList>
                     </td>
                 </tr>
@@ -143,6 +142,14 @@
                                         <asp:Label ID="Label5" runat="server" Text='<%# Bind("DateOfJoin") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
+                                <asp:TemplateField HeaderText="GenderId" ShowHeader="False" Visible="False">
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="TextBox9" runat="server" Visible="false" Text='<%# Bind("GenderId") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                    <ItemTemplate>
+                                        <asp:Label ID="Label9" runat="server" Visible="false" Text='<%# Bind("GenderId") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Gender" SortExpression="GenderName">
                                     <EditItemTemplate>
                                         <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("GenderName") %>'></asp:TextBox>
@@ -151,12 +158,28 @@
                                         <asp:Label ID="Label6" runat="server" Text='<%# Bind("GenderName") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
+                                <asp:TemplateField HeaderText="CountryId" Visible="False">
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="TextBox10" runat="server" Text='<%# Bind("CountryId") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                    <ItemTemplate>
+                                        <asp:Label ID="Label10" runat="server" Text='<%# Bind("CountryId") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Country" SortExpression="CountryName">
                                     <EditItemTemplate>
                                         <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("CountryName") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                     <ItemTemplate>
                                         <asp:Label ID="Label7" runat="server" Text='<%# Bind("CountryName") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="HobbyId" Visible="False">
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="TextBox11" runat="server" Text='<%# Bind("HobbyId") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                    <ItemTemplate>
+                                        <asp:Label ID="Label11" runat="server" Text='<%# Bind("HobbyId") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Hobby" SortExpression="HobbyName">
